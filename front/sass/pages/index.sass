@@ -1,0 +1,348 @@
+$blue: #000055
+$dark-blue: #000034
+$green: #33FF33
+$dark-green: #001815
+$white: #ffffff
+$table-border: #3ff
+$btn-hover-text: #0f1241
+$table-head-bg: #023D35
+$table-row-border: #1E2150
+$btn-hover-bg: #0F1241
+$info-number-color: #000C0A
+
+$font-gilroy-reg: Gilroy-Regular, sans-serif
+$font-gilroy-med: Gilroy-Medium, sans-serif
+$font-gilroy-bold: Gilroy-Bold, sans-serif
+$font-gilroy-semibold: Gilroy-Semibold, sans-serif
+$font-gilroy-black: Gilroy-Black, sans-serif
+
+body
+  img
+    max-width: 100%
+    height: auto
+.bonus__page
+  background: $dark-blue
+  -webkit-tap-highlight-color: transparent
+  overscroll-behavior: none
+  display: flex
+  flex-direction: column
+  align-items: center
+  overflow-x: hidden
+  padding: 20px
+  color: white
+  .banner
+    display: flex
+    border-radius: 10px
+    flex-direction: column
+    align-items: flex-start
+    justify-content: center
+    min-height: 390px
+    width: 100%
+    background: url("../img/banner-bg.jpg") no-repeat 50% 0/cover
+    font-size: 85px
+    line-height: 82px
+    text-transform: uppercase
+    padding: 80px 0 35px 80px
+    &__text
+      font-family: $font-gilroy-black
+      max-width: 760px
+      span
+        color: $green
+      br:nth-child(1), br:nth-child(4)
+        display: none
+      span:nth-child(2)
+        font-family: $font-gilroy-bold
+        font-size: 42px
+        position: relative
+        bottom: 30px
+        color: $white
+      span:nth-child(8)
+        font-size: 27px
+        font-family: $font-gilroy-bold
+    &__date
+      font-family: $font-gilroy-med
+      font-size: 14px
+      line-height: 14px
+  .casino
+    background: url("../img/casino-bg.jpg") no-repeat 50% 50%/cover
+    width: 100%
+    border-radius: 10px
+    margin-top: 20px
+    &__info
+      display: flex
+      align-items: center
+      justify-content: center
+      flex-direction: column
+      margin-top: 40px
+      gap: 40px
+      &-title
+        font-family: $font-gilroy-bold
+        font-size: 38px
+        span
+          color: $green
+          font-family: $font-gilroy-bold
+      &-wrap
+        display: flex
+        align-items: center
+        justify-content: space-around
+        width: 100%
+        .casino__info-item
+          display: flex
+          flex-direction: column
+          align-items: center
+          width: 280px
+          height: 225px
+          &:nth-child(4)
+            br:nth-child(1)
+              display: none
+          .casino__info-img
+            max-width: 150px
+          .casino__info-text
+            text-align: center
+            font-family: $font-gilroy-bold
+            font-size: 16px
+            line-height: 25px
+            span
+              color: $green
+              font-family: $font-gilroy-bold
+    &__bonus
+      display: flex
+      align-items: center
+      justify-content: center
+      flex-direction: column
+      width: 100%
+      background: url("../img/bonus-bg.png") no-repeat 50% 48%/cover
+      background-size: 100%
+      &-title
+        font-family: $font-gilroy-bold
+        font-size: 38px
+        margin-top: 80px
+        span
+          color: $green
+          font-family: $font-gilroy-bold
+      .tableBonus
+        width: 700px
+        background: $dark-green
+        border-radius: 10px
+        border: 2px solid $table-border
+        margin-top: 40px
+        &__head
+          display: flex
+          justify-content: center
+          border-bottom: 2px solid $table-border
+          border-top-left-radius: 10px
+          border-top-right-radius: 10px
+          background: $table-head-bg
+          color: $table-border
+          &-col
+            display: flex
+            align-items: center
+            justify-content: center
+            font-family: $font-gilroy-semibold
+            font-size: 16px
+            text-align: center
+            padding: 5px 0
+            width: 25%
+          &-col:last-child
+            color: $green
+        &__body
+          .tableBonus__row:last-child
+            justify-content: flex-end
+            color: $green
+            .tableBonus__body-col
+              font-family: $font-gilroy-bold
+          .tableBonus__row
+            display: flex
+            justify-content: space-around
+            border-bottom: 1px solid $table-row-border
+            .tableBonus__body-col
+              display: flex
+              justify-content: center
+              width: 25%
+              font-family: $font-gilroy-reg
+              font-size: 16px
+              padding: 15px 0
+    &__spins
+      display: flex
+      align-items: center
+      justify-content: center
+      flex-direction: column
+      width: 100%
+      margin-bottom: 70px
+      background: url("../img/spins-bg.svg") no-repeat 50% 40%/cover
+      &-title
+        font-family: $font-gilroy-bold
+        font-size: 38px
+        margin-top: 70px
+        br
+          display: none
+        span
+          color: $green
+          font-family: $font-gilroy-bold
+      .tableSpins
+        position: relative
+        width: 300px
+        background: $dark-green
+        border-radius: 10px
+        border: 2px solid $table-border
+        margin-top: 40px
+        &:before
+          content: "1 Spin = 1 ₴"
+          color: $white
+          font-family: $font-gilroy-black
+          font-size: 16px
+          position: absolute
+          bottom: -40px
+          left: 150px
+          transform: translateX(-50%)
+        &__head
+          display: flex
+          justify-content: center
+          border-bottom: 1px solid $table-border
+          border-top-left-radius: 10px
+          border-top-right-radius: 10px
+          background: $table-head-bg
+          color: $table-border
+          border-bottom: 2px solid $table-border
+          &-col:last-child
+            color: $green
+          &-col
+            width: 50%
+            font-family: $font-gilroy-semibold
+            font-size: 16px
+            text-align: center
+            padding: 5px 0
+        &__body
+          &-row:last-child
+            justify-content: flex-end
+            color: $green
+            .tableSpins__body-col
+              font-family: $font-gilroy-bold
+          &-row
+            display: flex
+            justify-content: space-around
+            border-bottom: 1px solid $table-row-border
+            .tableSpins__body-col
+              padding: 15px 0
+              width: 50%
+              font-family: $font-gilroy-reg
+              text-align: center
+      .casino__btn
+          cursor: pointer
+          position: relative
+          margin-top: 80px
+          max-width: 300px
+          z-index: 2
+          width: 100%
+          height: 45px
+          background: transparent
+          border: 1px solid $table-border
+          color: $table-border
+          border-radius: 50px
+          line-height: 23px
+          letter-spacing: 0.04em
+          display: flex
+          align-items: center
+          justify-content: space-between
+          padding: 0 25px
+          transition: background .3s linear
+          &-text
+            font-family: $font-gilroy-bold
+            font-size: 20px
+            padding-top: 2px
+            transition: background .3s linear
+          &-dots
+            background: url("../img/dots.svg") no-repeat 50% 0/cover
+            width: 35px
+            height: 20px
+            transition: background .3s linear
+          &:hover
+            cursor: pointer
+            background: $btn-hover-bg
+    .rules
+      padding: 0 20px
+      margin-bottom: 30px
+      .rules__wrap[open] .rules__btn::before
+        transform: translateY(-50%) rotate(0deg)
+      &__wrap
+        .rules__btn
+          cursor: pointer
+          position: relative
+          list-style: none
+          height: 55px
+          background: $table-head-bg
+          border-radius: 5px
+          display: flex
+          align-items: center
+          padding-left: 15px
+          text-transform: uppercase
+          color: $white
+          font-size: 18px
+          &::before
+            content: ""
+            background: url("../img/arrow.svg") no-repeat 0 0/cover
+            width: 24px
+            height: 24px
+            position: absolute
+            right: 15px
+            top: 28px
+            transform: translateY(-50%) rotate(180deg)
+          span
+           font-family: $font-gilroy-semibold
+           padding-top: 2px
+        .rules__list
+          display: flex
+          flex-direction: column
+          gap: 25px
+          margin-top: 30px
+          max-height: 600px
+          overflow-y: auto
+          &-item
+            font-size: 16px
+            line-height: 20px
+            font-family: $font-gilroy-reg
+            max-width: 90%
+          .sub-item
+            padding-left: 10px
+          .sub-item2
+            padding-left: 20px
+
+
+@media screen and (max-width: 1024px)
+  .banner
+    background: url("../img/banner-bg-tablet.jpg") no-repeat 50% 0/cover
+  .casino
+    &__bonus
+      background: url("../img/bonus-bg-tablet.png") no-repeat 50% 100%/cover
+    &__spins
+      background: url("../img/spins-bg-tab.png") no-repeat 50% 30%/cover
+
+
+.table-container
+  table
+    width: 100%
+    border-collapse: collapse
+
+    th, td
+      border: 1px solid $table-border
+      padding: 10px
+      text-align: center
+      font-family: $font-gilroy-reg
+
+    th
+      width: 100px
+
+    tbody
+      tr
+        td
+          width: calc(100% - 100px)
+
+@media screen and (max-width: 650px)
+  .banner
+    background: url("../img/banner-bg-mob.jpg") no-repeat 50% 0/cover
+  .casino
+    background: url("../img/casino-bg-mob.jpg") no-repeat 50% 0%/cover
+    &__spins
+      background: url("../img/spins-bg-mob.png") no-repeat 50% 55%/cover
+
+
