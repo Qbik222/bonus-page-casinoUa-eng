@@ -295,8 +295,17 @@ body
           flex-direction: column
           gap: 25px
           margin-top: 30px
-          max-height: 600px
+          max-height: 300px
           overflow-y: auto
+          &::-webkit-scrollbar
+            background-color: $dark-blue
+            width: 4px
+            border-radius: 50px
+          &::-webkit-scrollbar-thumb
+            background-color: $table-border
+            width: 4px
+            border-radius: 50px
+
           &-item
             font-size: 16px
             line-height: 20px
@@ -307,6 +316,22 @@ body
           .sub-item2
             padding-left: 20px
 
+.table-container
+  table
+    width: 100%
+    border-collapse: collapse
+    th, td
+      border: 1px solid $table-border
+      padding: 10px
+      text-align: center
+      font-family: $font-gilroy-reg
+    th
+      width: 100px
+    tbody
+      tr
+        td
+          width: calc(100% - 100px)
+
 
 @media screen and (max-width: 1024px)
   .banner
@@ -316,26 +341,6 @@ body
       background: url("../img/bonus-bg-tablet.png") no-repeat 50% 100%/cover
     &__spins
       background: url("../img/spins-bg-tab.png") no-repeat 50% 30%/cover
-
-
-.table-container
-  table
-    width: 100%
-    border-collapse: collapse
-
-    th, td
-      border: 1px solid $table-border
-      padding: 10px
-      text-align: center
-      font-family: $font-gilroy-reg
-
-    th
-      width: 100px
-
-    tbody
-      tr
-        td
-          width: calc(100% - 100px)
 
 @media screen and (max-width: 650px)
   .banner
