@@ -15,6 +15,8 @@ $font-gilroy-med: Gilroy-Medium, sans-serif
 $font-gilroy-bold: Gilroy-Bold, sans-serif
 $font-gilroy-semibold: Gilroy-Semibold, sans-serif
 $font-gilroy-black: Gilroy-Black, sans-serif
+$fonr-SFUIDisplay-black: SFUIDisplay-Black, sans-serif
+
 
 body
   overscroll-behavior: none
@@ -30,6 +32,8 @@ body
   overflow-x: hidden
   padding: 20px
   color: white
+  #currencySign
+    font-family: $fonr-SFUIDisplay-black
   .banner
     display: flex
     border-radius: 10px
@@ -265,6 +269,10 @@ body
       .rules__wrap[open] .rules__btn::before
         transform: translateY(-50%) rotate(0deg)
       &__wrap
+        summary::-webkit-details-marker
+          display: none
+        > summary
+            list-style: none
         .rules__btn
           cursor: pointer
           position: relative
