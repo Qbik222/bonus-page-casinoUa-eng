@@ -1,8 +1,8 @@
 @media screen and (min-width: 2200px)
-.bonus__page
-    .casino
-      &__spins
-        background-position: 50% 40%
+  .bonus__page
+      .casino
+        &__spins
+          background-position: 50% 40%
 
 @media screen and (max-width: 1600px)
   .bonus__page
@@ -33,24 +33,20 @@
           display: none
         br:nth-child(3)
           display: block
-        br:nth-child(4)
-          display: block
         span:nth-child(2)
           bottom: 5px
         span:nth-child(7)
           font-size: 16px
-        span
-          br:nth-child(2)
-            display: block
       &__date
         font-size: 10px
         margin-top: 10px
-        min-width: 400px
+        min-width: 300px
     .casino
       &__info
         &-wrap
           .casino__info-item
             width: 170px
+            height: 225px
             justify-content: flex-start
             &:nth-child(4)
               span
@@ -69,19 +65,33 @@
       &__spins
         .casino__btn
           background: $btn-hover-bg
+  .en
+    .banner
+      &__text
+          span
+            br:nth-child(2)
+              display: block
 
 @media screen and (max-width: 800px)
   .bonus__page
     .casino
       &__info
         &-wrap
-         .casino__info-item
+          .casino__info-item
             .casino__info-text
-               width: 90%
+              width: 90%
       &__bonus
         background-size: 110%
       &__spins
         background-position: 50% 0%
+  .en
+    .casino
+      .rules
+        &__wrap
+          .rules__btn
+              span
+                font-size: 14px
+                line-height: 16px
 @media screen and (max-width: 650px)
   .bonus__page
     padding: 10px
@@ -191,6 +201,7 @@
             display: block
         .tableSpins
           margin-top: 20px
+
           &__head
             &-col
               font-size: 14px
@@ -210,7 +221,18 @@
               top: 25px
             span
               max-width: 310px
-              line-height: 20px
+              font-size: 11px
+              line-height: 14px
+  .en
+    .casino
+      .rules
+        &__wrap
+          .rules__btn
+            span
+              font-size: 11px
+              line-height: 14px
+              max-width: 260px
+
   .table-container
     overflow-x: auto
     max-width: 600px
@@ -223,14 +245,14 @@
           font-size: 34px
         &-wrap
           .casino__info-item
-            width: 47%
-            .casino__info-text
-              font-size: 11px
-              line-height: 15px
-              width: 90%
-            &:nth-child(4)
+             width: 47%
              .casino__info-text
-               padding-top: 0
+                font-size: 11px
+                line-height: 15px
+                width: 90%
+             &:nth-child(4)
+               .casino__info-text
+                 padding-top: 0
       &__bonus
         &-title
           font-size: 34px
@@ -262,5 +284,11 @@
         &__wrap
           .rules__btn
             span
-              font-size: 15px
-              max-width: 260px
+              font-size: 9px
+              line-height: 14px
+              max-width: 240px
+  .table-container
+    min-height: 270px
+    table
+      th, td
+        font-size: 12px
