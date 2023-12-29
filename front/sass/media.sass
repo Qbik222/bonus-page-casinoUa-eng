@@ -29,14 +29,19 @@
         min-width: 400px
         br:nth-child(1)
           display: block
-        br:nth-child(3)
+        br:nth-child(2)
           display: none
+        br:nth-child(3)
+          display: block
         br:nth-child(4)
           display: block
         span:nth-child(2)
           bottom: 5px
-        span:nth-child(8)
+        span:nth-child(7)
           font-size: 16px
+        span
+          br:nth-child(2)
+            display: block
       &__date
         font-size: 10px
         margin-top: 10px
@@ -87,10 +92,7 @@
       width: 100vw
       border-radius: 0
       &__text
-        span:nth-child(2)
-          bottom: 0
-          font-size: 22px
-        span:nth-child(8)
+        span:nth-child(7)
           font-size: 8px
       &__date
         font-size: 5px
